@@ -16,3 +16,8 @@
 
 int ssc_cd(char **args);
 int ssc_help(char **args);
+int ssc_exit(char **args);
+
+// List of builtin commands, followed by their corresponding functions.
+char *builtin_str[] = {
+};
