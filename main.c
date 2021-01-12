@@ -27,3 +27,6 @@ char *builtin_str[] = {
 };
 
 // Now we assign the variables to the values in the commands array
+
+int (*builtin_func[]) (char **) = {
+};
