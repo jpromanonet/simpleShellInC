@@ -39,3 +39,14 @@ int (*builtin_func[]) (char **) = {
 int ssc_num_builtins() {
     return sizeof(builtin_str) / sizeof(char *);
 }
+
+// Builtin function implementations.
+/*
+   @brief Bultin command: change directory.
+   @param args List of args.  args[0] is "cd".  args[1] is the directory.
+   @return Always returns 1, to continue executing.
+ */
+
+int lsh_cd(char **args)
+{
+}
