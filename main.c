@@ -36,6 +36,6 @@ int (*builtin_func[]) (char **) = {
         &ssc_exit
 };
 
-int lsh_num_builtins() {
+int ssc_num_builtins() {
     return sizeof(builtin_str) / sizeof(char *);
 }
