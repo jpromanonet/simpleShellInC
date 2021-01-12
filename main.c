@@ -22,4 +22,5 @@ int ssc_exit(char **args);
 
 char *builtin_str[] = {
         "cd",
+        "help",
 };
