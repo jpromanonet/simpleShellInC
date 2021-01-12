@@ -5,6 +5,8 @@
   @brief        SSIC (Simple Shell in C)
 *******************************************************************************/
 
+// Calling libraries
+
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -30,4 +32,6 @@ char *builtin_str[] = {
 
 int (*builtin_func[]) (char **) = {
         &ssc_cd,
+        &ssc_help,
+        &ssc_exit
 };
