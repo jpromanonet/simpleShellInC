@@ -23,4 +23,7 @@ int ssc_exit(char **args);
 char *builtin_str[] = {
         "cd",
         "help",
+        "exit"
 };
+
+// Now we assign the variables to the values in the commands array
