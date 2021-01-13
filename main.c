@@ -218,4 +218,11 @@ char **ssc_split_line(char *line){
     int bufsize = SSC_TOK_BUFSIZE, position = 0;
     char **tokens = malloc(bufsize * sizeof(char*));
     char *token, **tokens_backup;
+
+    if(!tokens){
+        fprintf(stderr, "ssc: allocation error\n");
+        exit(EXIT_FAILURE);
+    }
+
+    token = strtok(line, SSC_TOK_DELIM);
 }
