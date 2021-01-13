@@ -172,4 +172,24 @@ char *ssc_read_line(void){
 
     char *buffer = malloc(sizeof(char) * bufsize);
     int c;
+
+    if(!buffer){
+        fprintf(stderr, "ssc: allocation error.\n");
+        exit(EXIT_FAILURE);
+    }
+
+    while(1){
+        // Read a character
+        c = getchar();
+
+        if(c == EOF){
+            exit(EXIT_SUCCESS);
+        } else if (c == '\n') {
+            buffer[position] = '\0';
+            return buffer;
+        } else {
+            buffer[position] = c;
+        }
+        position++;
+    }
 }
