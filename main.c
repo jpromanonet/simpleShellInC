@@ -151,4 +151,12 @@ int ssc_launch(char **args){
 char *ssc_read_line(void){
 #ifdef SSC_USE_STD_GETLINE
     char *line = NULL;
+    // Allocate a getline to the start of the buffer in 0
+    ssize_t bufferSize = 0;
+    if(getline(&line, &bufferSize, stdin) == -1){
+        if(feof(stdin)){
+            // This is an EOF
+            exit(EXIT_SUCCESS);
+        }
+    }
 }
