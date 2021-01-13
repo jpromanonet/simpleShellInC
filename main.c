@@ -215,5 +215,7 @@ char *ssc_read_line(void){
  */
 
 char **ssc_split_line(char *line){
-
+    int bufsize = SSC_TOK_BUFSIZE, position = 0;
+    char **tokens = malloc(bufsize * sizeof(char*));
+    char *token, **tokens_backup;
 }
