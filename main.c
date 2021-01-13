@@ -142,3 +142,13 @@ int ssc_launch(char **args){
         return ssc_launch(args);
     }
 }
+
+/**
+   @brief Read a line of input from stdin.
+   @return The line from stdin.
+ */
+
+char *ssc_read_line(void){
+#ifdef SSC_USE_STD_GETLINE
+    char *line = NULL;
+}
