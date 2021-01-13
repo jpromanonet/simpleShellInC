@@ -246,3 +246,13 @@ char **ssc_split_line(char *line){
     tokens[position] = NULL;
     return tokens;
 }
+
+/**
+   @brief Loop getting input and executing it.
+ */
+
+void ssc_loop(void){
+    char *line;
+    char **args;
+    int status;
+}
