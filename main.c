@@ -120,3 +120,17 @@ int ssc_launch(char **args){
 
     return 1;
 }
+
+/**
+   @brief Execute shell built-in or launch program.
+   @param args Null terminated list of arguments.
+   @return 1 if the shell should continue running, 0 if it should terminate
+ */
+
+int ssc_launch(char **args){
+    int i;
+
+    if(args[0] == NULL)
+        // There is an empty command entered
+        return 1;
+}
