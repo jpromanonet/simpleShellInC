@@ -152,8 +152,8 @@ char *ssc_read_line(void){
 #ifdef SSC_USE_STD_GETLINE
     char *line = NULL;
     // Allocate a getline to the start of the buffer in 0
-    ssize_t bufferSize = 0;
-    if(getline(&line, &bufferSize, stdin) == -1){
+    ssize_t bufsize = 0;
+    if(getline(&line, &bufsize, stdin) == -1){
         if(feof(stdin)){
             // This is an EOF
             exit(EXIT_SUCCESS);
@@ -166,6 +166,7 @@ char *ssc_read_line(void){
     return line;
 
 #else
-#define SSC_RL_BUFFERSIZE 1024
-    int bufferSize = SSC_RL_BUFFERSIZE;
+#define SSC_RL_BUFSIZE 1024
+    int bufsize = SSC_RL_BUFSIZE;
+    int position = 0;
 }
