@@ -115,6 +115,8 @@ int ssc_launch(char **args){
         // Parent process
         do {
             waitpid(pid, status, WUNTRACED);
-        }
+        } while(!WIFEXITED(status) && !WIFSIGNALED(status));
     }
+
+    return 1;
 }
