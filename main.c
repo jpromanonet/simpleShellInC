@@ -259,5 +259,10 @@ void ssc_loop(void){
     do{
         printf("> ");
         line = ssc_read_line();
-    }
+        args = ssc_split_line(line);
+        status = ssc_execute(args);
+
+        free(line);
+        free(args);
+    } while (status);
 }
