@@ -266,3 +266,10 @@ void ssc_loop(void){
         free(args);
     } while (status);
 }
+
+/**
+   @brief Main entry point.
+   @param argc Argument count.
+   @param argv Argument vector.
+   @return status code
+ */
