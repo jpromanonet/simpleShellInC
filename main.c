@@ -191,5 +191,16 @@ char *ssc_read_line(void){
             buffer[position] = c;
         }
         position++;
+
+        // We should reallocate if the buffer size is exceeded
+        if(position >= bufsize){
+            bufsize += SSC_RL_BUFSIZE;
+            buffer = realloc(buffer, bufsize);
+            if(!buffer) {
+                fprintf(stderr, "ssc: allocation error.\n");
+                exit(EXIT_FAILURE);
+            }
+        }
     }
+#endif
 }
