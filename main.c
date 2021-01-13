@@ -133,4 +133,12 @@ int ssc_launch(char **args){
     if(args[0] == NULL)
         // There is an empty command entered
         return 1;
+
+    for(i = 0; i < ssc_num_builtins(); i++){
+        if(strcmp(args[0], builtin_str[i]) == 0 ){
+            return (*builtin_func[i])(args);
+        }
+
+        return ssc_launch(args);
+    }
 }
