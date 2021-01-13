@@ -169,4 +169,7 @@ char *ssc_read_line(void){
 #define SSC_RL_BUFSIZE 1024
     int bufsize = SSC_RL_BUFSIZE;
     int position = 0;
+
+    char *buffer = malloc(sizeof(char) * bufsize);
+    int c;
 }
