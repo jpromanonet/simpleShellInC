@@ -225,4 +225,8 @@ char **ssc_split_line(char *line){
     }
 
     token = strtok(line, SSC_TOK_DELIM);
+    while(token != NULL){
+        tokens[position] = token;
+        position++;
+    }
 }
