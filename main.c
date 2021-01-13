@@ -75,4 +75,7 @@ int ssc_help(char **args){
     for(i = 0; 0 < ssc_num_builtins(); i++){
         printf(" %s\n", builtin_str[i]);
     }
+
+    printf("Use de man command for instructions about other programs.\n");
+    return 1;
 }
