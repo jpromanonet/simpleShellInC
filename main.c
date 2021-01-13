@@ -41,8 +41,9 @@ int ssc_num_builtins() {
 }
 
 // Builtin function implementations.
+
 /*
-   @brief Bultin command: change directory.
+   @brief Builtin command: change directory.
    @param args List of args.  args[0] is "cd".  args[1] is the directory.
    @return Always returns 1, to continue executing.
  */
@@ -51,5 +52,10 @@ int ssc_cd(char **args)
 {
     if (args[1] == NULL) {
         fprintf(stderr, "ssc: expected argument to \"cd\"\n");
+    } else {
+        if (chdir(args[1]) != 0) {
+            perror("lsh");
+        }
     }
+    return 1;
 }
