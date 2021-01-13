@@ -228,5 +228,12 @@ char **ssc_split_line(char *line){
     while(token != NULL){
         tokens[position] = token;
         position++;
+
+        if(position >= bufsize){
+            bufsize += SSC_TOK_BUFSIZE;
+            tokens_backup = tokens;
+            tokens = realloc(tokens, bufsize * sizeof (char*));
+
+        }
     }
 }
