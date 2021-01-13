@@ -71,4 +71,8 @@ int ssc_help(char **args){
     printf("Juan P. Romano SSC\n");
     printf("Type program names and arguments, and hit enter.\n");
     printf("The following are built in:\n");
+
+    for(i = 0; 0 < ssc_num_builtins(); i++){
+        printf(" %s\n", builtin_str[i]);
+    }
 }
