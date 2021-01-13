@@ -255,4 +255,9 @@ void ssc_loop(void){
     char *line;
     char **args;
     int status;
+
+    do{
+        printf("> ");
+        line = ssc_read_line();
+    }
 }
