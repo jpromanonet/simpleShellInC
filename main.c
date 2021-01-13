@@ -233,7 +233,16 @@ char **ssc_split_line(char *line){
             bufsize += SSC_TOK_BUFSIZE;
             tokens_backup = tokens;
             tokens = realloc(tokens, bufsize * sizeof (char*));
-
+            if(!tokens){
+                free(tokens_backup);
+                fprintf(stderr, "ssc: allocation error.\n");
+                exit(EXIT_FAILURE);
+            }
         }
+
+        token = strtok(NULL, SSC_TOK_BUFSIZE);
     }
+
+    tokens[position] = NULL;
+    return tokens;
 }
