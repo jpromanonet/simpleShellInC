@@ -157,6 +157,15 @@ char *ssc_read_line(void){
         if(feof(stdin)){
             // This is an EOF
             exit(EXIT_SUCCESS);
+        } else {
+            perror("SSC: getline\n");
+            exit(EXIT_FAILURE);
         }
     }
+
+    return line;
+
+#else
+#define SSC_RL_BUFFERSIZE 1024
+    int bufferSize = SSC_RL_BUFFERSIZE;
 }
