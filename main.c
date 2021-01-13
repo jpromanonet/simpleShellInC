@@ -79,3 +79,14 @@ int ssc_help(char **args){
     printf("Use de man command for instructions about other programs.\n");
     return 1;
 }
+
+/**
+   @brief Builtin command: exit.
+   @param args List of args.  Not examined.
+   @return Always returns 0, to terminate execution.
+ */
+
+int ssc_exit(char **args){
+    printf("I will be back user!");
+    return 0;
+}
