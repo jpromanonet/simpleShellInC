@@ -54,7 +54,7 @@ int ssc_cd(char **args)
         fprintf(stderr, "ssc: expected argument to \"cd\"\n");
     } else {
         if (chdir(args[1]) != 0) {
-            perror("lsh");
+            perror("ssc");
         }
     }
     return 1;
