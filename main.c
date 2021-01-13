@@ -47,6 +47,9 @@ int ssc_num_builtins() {
    @return Always returns 1, to continue executing.
  */
 
-int lsh_cd(char **args)
+int ssc_cd(char **args)
 {
+    if (args[1] == NULL) {
+        fprintf(stderr, "ssc: expected argument to \"cd\"\n");
+    }
 }
