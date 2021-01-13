@@ -59,3 +59,16 @@ int ssc_cd(char **args)
     }
     return 1;
 }
+
+/**
+   @brief Builtin command: print help.
+   @param args List of args.  Not examined.
+   @return Always returns 1, to continue executing.
+ */
+
+int ssc_help(char **args){
+    int i;
+    printf("Juan P. Romano SSC\n");
+    printf("Type program names and arguments, and hit enter.\n");
+    printf("The following are built in:\n");
+}
