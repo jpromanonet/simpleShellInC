@@ -273,3 +273,10 @@ void ssc_loop(void){
    @param argv Argument vector.
    @return status code
  */
+
+int main(int argc, char **argv){
+    // Load config file, if any.
+
+    // Run command loop
+
+}
