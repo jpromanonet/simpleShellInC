@@ -278,5 +278,6 @@ int main(int argc, char **argv){
     // Load config file, if any.
 
     // Run command loop
+    ssc_loop();
 
 }
