@@ -280,4 +280,6 @@ int main(int argc, char **argv){
     // Run command loop
     ssc_loop();
 
+    // Perform any shutdown/cleanup
+    return EXIT_SUCCESS;
 }
